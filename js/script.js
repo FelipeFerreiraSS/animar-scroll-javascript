@@ -7,3 +7,22 @@
 // 3.3 - Se verdadeiro adicionar classe de animação, remover se for falso.
 // 4 - Ativar a função de animação toda vez que o usuário utilizar o Scroll
 // 5 - Otimizar ativação
+
+const target = document.querySelectorAll('[data-anime]')
+
+const animationClass = 'animate' 
+
+function animeScroll() {
+    const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4)
+    target.forEach(function(e) {
+        if((windowTop) > e.offsetTop) {
+            e.classList.add(animationClass)
+        } else {
+            e.classList.remove(animationClass)
+        }
+    }) 
+} 
+
+window.addEventListener('scroll', function() {
+    animeScroll()
+})
