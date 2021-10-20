@@ -1,2 +1,3 @@
 # animar scroll javascript
-Animação de scroll com css e js
+Animação de scroll com css e Java Script
+
